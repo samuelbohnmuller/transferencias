@@ -1,0 +1,11 @@
+<!--<app-nova-transferencia (aoTransferir)="transfere($event)"></app-nova-transferencia>--> <!-- transfere é método local, não é o mesmo que transferir. Valor sobre () do emit do método aoTransferir da classe é passado para variável $event. Método transfere será chamado quando disparar o aoTransferir.-->
+<!--<app-nova-transferencia></app-nova-transferencia>-->
+<!--<app-extrato></app-extrato>-->
+
+<header> <!--Cabeçalho da página inicial com links para telas de cadastro e extrato.-->
+  <a routerLink="extrato">Banco</a> <!--routerLink carrega somente o componente no DOM.-->
+  <a routerLink="nova-transferencia" routerLinkActive="ativo">Nova Transferência</a> <!--Nome dos links representam a rota do componente implementado no modulo de rota. O link só será apresentado se o endereço estiver nessa rota, pois chamará CSS de nome "ativo". -->
+</header>
+<main>
+  <router-outlet></router-outlet> <!--Invocação das rotas. Para apresentar os componentes na tela por URL no navegador.-->
+</main>
